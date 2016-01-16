@@ -1,0 +1,16 @@
+%div.media
+  %div.media-body
+    %table.table
+      %thead.index-haml-pages
+        %th.col-md-2= smart_listing.sortable "Title", "title"
+        %th.col-md-2= smart_listing.sortable "Director", "director"
+      %tbody
+        - smart_listing.collection.each do |o|
+          %tr.editable{:data => {:id => o.id}}
+            = smart_listing.render object: o, partial: "movies/movie", locals: {object: o}
+
+        %div.smart-listing-new-button
+          = smart_listing.item_new colspan: 12, link: new_movie_path
+
+    = smart_listing.paginate
+    = smart_listing.pagination_per_page_links

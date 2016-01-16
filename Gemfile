@@ -45,3 +45,6 @@ group :development do
   gem 'spring'
 end
 
+gem 'smart_listing', '~> 1.1', '>= 1.1.2'
+gem 'haml', '~> 4.0', '>= 4.0.7'
+gem 'font-awesome-rails', '~> 4.5'

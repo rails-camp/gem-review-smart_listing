@@ -1,0 +1,3 @@
+%td.table-text= object.title
+%td.table-text= object.director
+%td.actions= smart_listing_item_actions [{name: :edit, url: edit_movie_path(object)}, {name: :destroy, url: movie_path(object), confirmation: "Are you sure you want to delete this movie?"}]

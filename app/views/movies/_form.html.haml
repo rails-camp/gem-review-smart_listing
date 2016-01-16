@@ -1,0 +1,17 @@
+%td
+  = form_for object, url: object.new_record? ? movies_path : movie_path(object), remote: true, html: {enctype: 'multipart/form-data', class: ""} do |f|
+    
+    %div
+      = f.label :title, "Title #{object.errors['title'][0]}"
+      = f.text_field :title
+      %br
+
+    %div
+      = f.label :director, "Director #{object.errors['director'][0]}"
+      = f.text_field :director
+      %br
+
+    %hr
+
+    = f.submit "Save"
+    %button.btn.btn-link.cancel Cancel
